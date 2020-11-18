@@ -1,4 +1,4 @@
-{% set version = "1.0.6" %}
+{% set version = "1.1.0" %}
 
 package:
   name: elevation
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/elevation/elevation-{{ version }}.tar.gz
-  sha256: a307ccf45c372e3ff24a64c386c6ded11c6ad73e9fd12fa786f18cc025162b3c
+  sha256: 935f0bdc488df5f6187177b2d946e9322262eac4a8d643956ca82d7012dd7c55
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - eio=elevation.cli:eio
 
@@ -37,7 +37,7 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: "Python script to download global terrain digital elevation models, SRTM 30m DEM and SRTM 90m DEM"
+  summary: Python script to download global terrain digital elevation models, SRTM 30m DEM and SRTM 90m DEM
 
 extra:
   recipe-maintainers:
