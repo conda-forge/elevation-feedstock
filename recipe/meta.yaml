@@ -1,5 +1,5 @@
 {% set name = "elevation" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/elevation-{{ version }}.tar.gz
-  sha256: 935f0bdc488df5f6187177b2d946e9322262eac4a8d643956ca82d7012dd7c55
+  sha256: eea9f6d25d955cc0b7e59fcef066304344c469eab7d9aba01c752bf03772ad10
 
 build:
   number: 0
