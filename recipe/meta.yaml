@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3
     - appdirs
-    - click <7.0
+    - click
     - fasteners
     - future
 
