@@ -11,7 +11,7 @@ source:
   sha256: be27446562e7964f7d8fa78c4829dbbb8ac43df405ad09be8c49633adb8f4877
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - eio=elevation.cli:eio
