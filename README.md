@@ -3,11 +3,13 @@ About elevation-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/elevation-feedstock/blob/main/LICENSE.txt)
 
-Home: http://elevation.bopen.eu
+Home: https://github.com/bopen/elevation
 
 Package license: Apache-2.0
 
 Summary: Python script to download global terrain digital elevation models, SRTM 30m DEM and SRTM 90m DEM
+
+Documentation: http://elevation.bopen.eu/
 
 Current build status
 ====================
@@ -144,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@thewchan](https://github.com/thewchan/)
 
