@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: elevation
-  version: "1.1.4"
+  version: "2.0.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,36 +10,36 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/elevation-${{ version }}.tar.gz
-  sha256: 0e68778edf43110ad6a62ca491e32d9f4d1a59c41a720688ff0066ee1de87293
+  sha256: 187eab21de883d8adabd3d8fc5bf98a4287a60a1912f2653f25c7e47e080d9a0
 
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
-      - eio=elevation.cli:eio
+      - eio = elevation.__main__:app
 
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools >=42
-    - wheel
-    - setuptools_scm >=3.4
-    - setuptools_scm_git_archive
+    - setuptools >=77
+    - setuptools-scm >=8
     - pip
   run:
     - python >=${{ python_min }}
-    - appdirs
-    - click
-    - fasteners
+    - fasteners >=0.18
+    - platformdirs >=2.6.0
+    - typer >=0.26.7
 
 tests:
   - python:
       imports:
         - elevation
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
