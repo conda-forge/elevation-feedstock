@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: elevation
-  version: "2.0.1"
+  version: 2.1.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/elevation-${{ version }}.tar.gz
-  sha256: 187eab21de883d8adabd3d8fc5bf98a4287a60a1912f2653f25c7e47e080d9a0
+  sha256: bb6f013a6dc6dea769c1cbc2f36f4007073a39a3c5d329de58124bea82377dc0
 
 build:
   number: 0
@@ -30,8 +30,7 @@ requirements:
     - python >=${{ python_min }}
     - fasteners >=0.18
     - platformdirs >=2.6.0
-    - typer >=0.26.7
-
+    - click >=8.1
 tests:
   - python:
       imports:
@@ -39,7 +38,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - requirements:
       run:
         - python ${{ python_min }}.*
